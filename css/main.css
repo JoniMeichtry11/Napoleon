@@ -12,7 +12,7 @@
 body {
     background: radial-gradient(rgb(122, 5, 5),rgb(29, 1, 1));
     display: flex;
-    margin: 0px;
+    margin: 0;
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
@@ -21,6 +21,7 @@ body {
 
 .container{
     display: grid;
+	width: 100%;
     grid-template-areas: 
         "head head head head"
         "parr parr parr parr"
@@ -52,7 +53,6 @@ body {
     grid-area: head;
     width: 100%;
     height: 100vh;
-    max-width: 1280px;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -72,7 +72,6 @@ body {
 .inicio__txt{
     display: inline-block;
     width: 100%;
-    max-width: 800px;
     text-align: right;
     position: absolute;
     right: 100px;
@@ -256,6 +255,8 @@ body {
     overflow: hidden;
 }
 
+/* MODALS */
+
 .contenedor-modal.active {
 	position: fixed;
 	width: 100vw;
@@ -269,8 +270,8 @@ body {
 }
 .contenedor-modal.active img {
 	z-index: 3;
-	width: 700px;
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .contenedor-modal.active::after {
@@ -295,8 +296,8 @@ body {
 }
 .contenedor-modal2.active img {
 	z-index: 3;
-	width: 700px;
-	height: 700px;
+	width: 100%;
+	height: 100%;
 }
 
 .contenedor-modal2.active::after {
@@ -321,8 +322,8 @@ body {
 }
 .contenedor-modal3.active img {
 	z-index: 3;
-	width: 700px;
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .contenedor-modal3.active::after {
@@ -347,8 +348,8 @@ body {
 }
 .contenedor-modal4.active img {
 	z-index: 3;
-	width: 700px;
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .contenedor-modal4.active::after {
@@ -373,8 +374,8 @@ body {
 }
 .contenedor-modal5.active img {
 	z-index: 3;
-	width: 700px;
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .contenedor-modal5.active::after {
@@ -399,8 +400,8 @@ body {
 }
 .contenedor-modal6.active img {
 	z-index: 3;
-	width: 700px;
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .contenedor-modal6.active::after {
@@ -425,8 +426,8 @@ body {
 }
 .contenedor-modal7.active img {
 	z-index: 3;
-	width: 700px;
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .contenedor-modal7.active::after {
@@ -451,8 +452,8 @@ body {
 }
 .contenedor-modal8.active img {
 	z-index: 3;
-	width: 700px;
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .contenedor-modal8.active::after {
@@ -477,8 +478,8 @@ body {
 }
 .contenedor-modal9.active img {
 	z-index: 3;
-	width: 700px;
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .contenedor-modal9.active::after {
@@ -503,8 +504,8 @@ body {
 }
 .contenedor-modal10.active img {
 	z-index: 3;
-	width: 700px;
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .contenedor-modal10.active::after {
@@ -1657,6 +1658,7 @@ a {
     grid-auto-columns: auto;
     grid-auto-rows: 200px;
     grid-gap: 10px;
+	justify-content: center;
     padding: 20px;
 }
 
@@ -1722,11 +1724,12 @@ a {
 .grid-container6 {
     grid-area: image6;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-columns: auto;
     grid-auto-rows: 200px;
     grid-gap: 10px;
     padding: 20px;
+	grid-auto-flow: dense;
 }
 
 .grid-container6 a{
